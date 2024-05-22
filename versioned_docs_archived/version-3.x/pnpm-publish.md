@@ -13,7 +13,7 @@ pnpm publish [<tarball>|<folder>] [--tag <tag>] [--access <public|restricted>]
 When publishing a package inside a [workspace](workspace.md), the LICENSE file from the
 root of the workspace is packed with the package (unless the package has a license of its own).
 
-## --tag &lt;tag>
+## --tag \<tag>
 
 Publishes the package with the given tag. By default, `pnpm publish` updates the `latest` tag.
 
@@ -26,7 +26,7 @@ pnpm publish --tag next
 pnpm add foo@next
 ```
 
-## --access &lt;public|restricted>
+## --access \<public|restricted>
 
 Tells the registry whether the published package should be public or restricted.
 
@@ -42,13 +42,13 @@ For instance, the following `package.json`:
 
 ```json
 {
-    "name": "foo",
-    "version": "1.0.0",
-    "main": "src/index.ts",
-    "publishConfig": {
-        "main": "lib/index.js",
-        "typings": "lib/index.d.ts"
-    }
+  "name": "foo",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "publishConfig": {
+    "main": "lib/index.js",
+    "typings": "lib/index.d.ts"
+  }
 }
 ```
 
@@ -56,9 +56,9 @@ Will be published as:
 
 ```json
 {
-    "name": "foo",
-    "version": "1.0.0",
-    "main": "lib/index.js",
-    "typings": "lib/index.d.ts"
+  "name": "foo",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts"
 }
 ```

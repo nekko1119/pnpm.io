@@ -31,7 +31,7 @@ pnpm outdated gulp-* @babel/core
 Check for outdated dependencies in every package found in subdirectories
 or in every workspace package, when executed inside a workspace.
 
-### --filter &lt;package_selector>
+### --filter \<package_selector>
 
 [Read more about filtering.](../filtering.md)
 

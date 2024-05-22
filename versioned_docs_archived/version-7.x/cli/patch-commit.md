@@ -13,7 +13,7 @@ pnpm patch-commit <patchDir>
 
 ## Options
 
-### ---patches-dir &lt;dir>
+### ---patches-dir \<dir>
 
 Added in: v7.30.0
 

@@ -15,9 +15,9 @@ pnpm link <dir>
 
 ## Options
 
-### --dir &lt;dir\>, -C
+### --dir \<dir\>, -C
 
-* **Default**: Current working directory
-* **Type**: Path string
+- **Default**: Current working directory
+- **Type**: Path string
 
 Changes the link location to `<dir>`.

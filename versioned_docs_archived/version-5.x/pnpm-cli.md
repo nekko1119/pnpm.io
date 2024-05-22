@@ -16,7 +16,7 @@ is populated from the CLI options. In this case, you have the following options:
 
 ## Options
 
-### -C &lt;path\>, --dir &lt;path\>
+### -C \<path\>, --dir \<path\>
 
 Run as if pnpm was started in `<path>` instead of the current working directory.
 
@@ -33,7 +33,7 @@ For more information, see the documentation for individual CLI commands. Here is
 a list of handy npm equivalents to get you started:
 
 | npm command     | pnpm equivalent    |
-|-----------------|--------------------|
+| --------------- | ------------------ |
 | `npm install`   | [`pnpm install`]   |
 | `npm i <pkg>`   | [`pnpm add <pkg>`] |
 | `npm run <cmd>` | [`pnpm <cmd>`]     |

@@ -20,8 +20,8 @@ pnpm -r publish
 
 ### --link-workspace-packages
 
-* Default: **true**
-* Type: **true, false, deep**
+- Default: **true**
+- Type: **true, false, deep**
 
 Link locally available packages in workspaces of a monorepo into `node_modules`
 instead of re-downloading them from the registry. This emulates functionality
@@ -39,8 +39,8 @@ may override that if necessary.
 
 Added in: v2.13.0
 
-* Default: **4**
-* Type: **Number**
+- Default: **4**
+- Type: **Number**
 
 Set the maximum number of tasks to run simultaneously. For unlimited concurrency
 use `Infinity`.
@@ -51,8 +51,8 @@ use `Infinity`.
 
 Added in: v2.13.0
 
-* Default: **true**
-* Type: **Boolean**
+- Default: **true**
+- Type: **Boolean**
 
 If true, stops when a task throws an error.
 
@@ -61,6 +61,7 @@ Even if `--no-bail` is used, all tasks will finish but if any of the tasks fail,
 the command will exit with a non-zero code.
 
 Example (run tests in every package, continue if tests fail in one of them):
+
 ```sh
 pnpm -r --no-bail test
 ```
@@ -69,13 +70,14 @@ pnpm -r --no-bail test
 
 Added in: v2.14.0
 
-* Default: **true**
-* Type: **Boolean**
+- Default: **true**
+- Type: **Boolean**
 
 When `true`, packages are sorted topologically (dependencies before dependents).
 Pass `--no-sort` to disable.
 
 Example:
+
 ```sh
 pnpm -r --no-sort test
 ```
@@ -84,8 +86,8 @@ pnpm -r --no-sort test
 
 Added in: v5.17.1
 
-* Default: **false**
-* Type: **boolean**
+- Default: **false**
+- Type: **boolean**
 
 When `true`, the order of packages is reversed.
 
@@ -93,6 +95,6 @@ When `true`, the order of packages is reversed.
 pnpm -r --reverse run clean
 ```
 
-### --filter &lt;package_selector\>
+### --filter \<package_selector\>
 
 [Read more about filtering.](../filtering.md)

@@ -33,7 +33,7 @@ Publish all packages from the workspace.
 
 Show information in JSON format.
 
-### --tag &lt;tag\>
+### --tag \<tag\>
 
 Publishes the package with the given tag. By default, `pnpm publish` updates
 the `latest` tag.
@@ -47,7 +47,7 @@ pnpm publish --tag next
 pnpm add foo@next
 ```
 
-### --access &lt;public|restricted\>
+### --access \<public|restricted\>
 
 Tells the registry whether the published package should be public or restricted.
 
@@ -55,10 +55,10 @@ Tells the registry whether the published package should be public or restricted.
 
 Don't check if current branch is your publish branch, clean, and up-to-date with remote.
 
-### --publish-branch &lt;branch\>
+### --publish-branch \<branch\>
 
-* Default: **master** and **main**
-* Types: **String**
+- Default: **master** and **main**
+- Types: **String**
 
 The primary branch of the repository which is used for publishing the latest
 changes.
@@ -97,7 +97,7 @@ Does everything a publish would do except actually publishing to the registry.
 
 When publishing packages that require two-factor authentication, this option can specify a one-time password.
 
-### --filter &lt;package_selector\>
+### --filter \<package_selector\>
 
 [Read more about filtering.](../filtering.md)
 
@@ -114,11 +114,10 @@ publish-branch=production
 
 ## Life Cycle Scripts
 
-* `prepublishOnly`
-* `prepublish`
-* `prepack`
-* `prepare`
-* `postpack`
-* `publish`
-* `postpublish`
-
+- `prepublishOnly`
+- `prepublish`
+- `prepack`
+- `prepare`
+- `postpack`
+- `publish`
+- `postpublish`

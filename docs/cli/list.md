@@ -35,7 +35,7 @@ Outputs package directories in a parseable format instead of their tree view.
 
 List packages in the global install directory instead of in the current project.
 
-### --depth &lt;number\>
+### --depth \<number\>
 
 Max display depth of the dependency tree.
 
@@ -61,6 +61,6 @@ Don't display packages from `optionalDependencies`.
 
 Display only dependencies that are also projects within the workspace.
 
-### --filter &lt;package_selector\>
+### --filter \<package_selector\>
 
 [Read more about filtering.](../filtering.md)

@@ -10,15 +10,15 @@ pnpm creates [hard links](https://en.wikipedia.org/wiki/Hard_link) from the glob
 Hard links point to the same place on the disk where the original files are.
 So, for example, if you have `foo` in your project as a dependency and it occupies 1MB of space,
 then it will look like it occupies 1MB of space in the project's `node_modules` folder and
-the same amount of space in the global store. However, that 1MB is *the same space* on the disk
+the same amount of space in the global store. However, that 1MB is _the same space_ on the disk
 addressed from two different locations. So in total `foo` occupies 1MB,
 not 2MB.
 
 For more on this subject:
 
-* [Why do hard links seem to take the same space as the originals?](https://unix.stackexchange.com/questions/88423/why-do-hard-links-seem-to-take-the-same-space-as-the-originals)
-* [A thread from the pnpm chat room](https://gist.github.com/zkochan/106cfef49f8476b753a9cbbf9c65aff1)
-* [An issue in the pnpm repo](https://github.com/pnpm/pnpm/issues/794)
+- [Why do hard links seem to take the same space as the originals?](https://unix.stackexchange.com/questions/88423/why-do-hard-links-seem-to-take-the-same-space-as-the-originals)
+- [A thread from the pnpm chat room](https://gist.github.com/zkochan/106cfef49f8476b753a9cbbf9c65aff1)
+- [An issue in the pnpm repo](https://github.com/pnpm/pnpm/issues/794)
 
 ## Does it work on Windows? It is harder to create symlinks on Windows
 
@@ -44,8 +44,8 @@ For more details about why this decision was made, see: https://github.com/nodej
 
 ## Does pnpm work across multiple hard drives or filesystems?
 
-The package store should be on the same disk as installations. 
-Otherwise packages will be copied, not linked. 
+The package store should be on the same disk as installations.
+Otherwise packages will be copied, not linked.
 This is due to a OS limitation in hard-linking. See [Issue #712](https://github.com/pnpm/pnpm/issues/712) for more details.
 
 pnpm functions differently based on the 2 cases below:
@@ -62,7 +62,7 @@ This severely reduces the benefits of pnpm.
 
 If the store path is not set, then multiple stores are created (one per each drive or filesystem).
 
-If installation is run on disk `D:`, the store will be created in `D:\.pnpm-store`. 
+If installation is run on disk `D:`, the store will be created in `D:\.pnpm-store`.
 If later the installation is run on disk `C:`, an independent store will be created in `C:\.pnpm-store`.
 The projects would still maintain the benefits of pnpm, but each drive may have redundant packages.
 
@@ -90,7 +90,7 @@ Then pnpm would need to re-download all removed packages, briefly slowing down t
 
 `pnpm` stands for `performant npm`. [@rstacruz](https://github.com/rstacruz/) came up with the name.
 
-## `pnpm` does not work with &lt;YOUR-PROJECT-HERE\>?
+## `pnpm` does not work with \<YOUR-PROJECT-HERE\>?
 
 In most cases it means that one of the dependencies require packages not declared in `package.json`.
 It is a common mistake caused by flat `node_modules`. If this happens, this is an error in the dependency and the
@@ -136,16 +136,16 @@ Solution was to create a `pnpmfile.js` with the following contents:
 ```js
 module.exports = {
   hooks: {
-    readPackage (pkg) {
+    readPackage(pkg) {
       switch (pkg.name) {
-        case 'inspectpack':
-          pkg.dependencies['babel-traverse'] = '^6.26.0'
-          break
+        case "inspectpack":
+          pkg.dependencies["babel-traverse"] = "^6.26.0";
+          break;
       }
-      return pkg
-    }
-  }
-}
+      return pkg;
+    },
+  },
+};
 ```
 
 After creating `pnpmfile.js`, delete `pnpm-lock.yaml` only. No need to delete `node_modules`. Then install the dependencies & it should be working.

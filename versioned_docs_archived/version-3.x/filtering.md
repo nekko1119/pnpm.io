@@ -21,12 +21,12 @@ Most of the commands, also allow passing selectors after `--`.
 Except commands that run scripts (`pnpm run`, `pnpm start`, `pnpm test`, etc).
 
 ```text
-pnpm <command> -- &lt;package_selectors>...
+pnpm <command> -- \<package_selectors>...
 ```
 
 > An article that compares Lerna's filtering to pnpm's: https://medium.com/pnpm/pnpm-vs-lerna-filtering-in-a-multi-package-repository-1f68bc644d6a
 
-## --filter &lt;package_name>
+## --filter \<package_name>
 
 Added in: v2.13.0
 
@@ -43,7 +43,7 @@ pnpm install -- @babel/core
 pnpm install -- @babel/*
 ```
 
-## --filter &lt;package_name>...
+## --filter \<package_name>...
 
 Added in: v2.13.0
 
@@ -64,7 +64,7 @@ pnpm install --filter @babel/preset-*...
 pnpm install -- @babel/preset-*...
 ```
 
-## --filter ...&lt;package_name>
+## --filter ...\<package_name>
 
 Added in: 2.14.0
 
@@ -86,6 +86,6 @@ pnpm install --filter ...foo --filter bar --filter qar...
 pnpm install -- ...foo bar qar...
 ```
 
-## --filter ./&lt;directory>
+## --filter ./\<directory>
 
 Added in: v2.15.0

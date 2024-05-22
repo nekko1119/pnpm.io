@@ -6,15 +6,15 @@ original_id: recursive
 
 ## tl;dr
 
-|Command|Meaning|
-|--|--|
-|`pnpm install -r` | runs installation for every package in every subfolder |
-|`pnpm run build --filter foo-*` |builds all packages with names that start with `foo-` |
-|`pnpm update -- login-page...` |updates dependencies in `login-page` and any dependencies of `login-page` that are also in the repository |
+| Command                         | Meaning                                                                                                   |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `pnpm install -r`               | runs installation for every package in every subfolder                                                    |
+| `pnpm run build --filter foo-*` | builds all packages with names that start with `foo-`                                                     |
+| `pnpm update -- login-page...`  | updates dependencies in `login-page` and any dependencies of `login-page` that are also in the repository |
 
 ## Options
 
-### --filter &lt;package_selector>
+### --filter \<package_selector>
 
 [Read more about filtering.](../filtering.md)
 
@@ -22,8 +22,8 @@ original_id: recursive
 
 Added in: v2.13.0
 
-* Default: **4**
-* Type: **Number**
+- Default: **4**
+- Type: **Number**
 
 Set the maximum number of concurrency. For unlimited concurrency use `Infinity`.
 
@@ -31,8 +31,8 @@ Set the maximum number of concurrency. For unlimited concurrency use `Infinity`.
 
 Added in: v2.13.0
 
-* Default: **true**
-* Type: **Boolean**
+- Default: **true**
+- Type: **Boolean**
 
 If true, stops when a task throws an error.
 
@@ -50,8 +50,8 @@ pnpm recursive test --no-bail
 
 Added in: v2.14.0
 
-* Default: **true**
-* Type: **Boolean**
+- Default: **true**
+- Type: **Boolean**
 
 When `true`, packages are sorted topologically (dependencies before dependents). Pass `--no-sort` to disable.
 

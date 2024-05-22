@@ -24,7 +24,7 @@ from every workspace package.
 When used not inside a workspace, removes a dependency (or dependencies)
 from every package found in subdirectories.
 
-### --filter &lt;package_selector>
+### --filter \<package_selector>
 
 [Read more about filtering.](../filtering.md)
 

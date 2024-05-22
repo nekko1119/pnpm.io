@@ -6,11 +6,11 @@ original_id: pnpm-recursive
 
 ## tl;dr
 
-|Command|Meaning|
-|--|--|
-|`pnpm recursive install` | runs installation for every package in every subfolder |
-|`pnpm recursive run build --filter foo-*` |builds all packages with names that start with `foo-` |
-|`pnpm recursive update -- login-page...` |updates dependencies in `login-page` and any dependencies of `login-page` that are also in the repository |
+| Command                                   | Meaning                                                                                                   |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| `pnpm recursive install`                  | runs installation for every package in every subfolder                                                    |
+| `pnpm recursive run build --filter foo-*` | builds all packages with names that start with `foo-`                                                     |
+| `pnpm recursive update -- login-page...`  | updates dependencies in `login-page` and any dependencies of `login-page` that are also in the repository |
 
 ## Options
 
@@ -18,8 +18,8 @@ original_id: pnpm-recursive
 
 Added in: v2.14.0
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 When `true`, locally available packages are linked to `node_modules` instead of being downloaded from the registry.
 This is very convenient in a multi-package repository.
@@ -36,7 +36,7 @@ Create a [pnpm-workspace.yaml](workspace.md) file with the following content:
 
 ```yaml
 packages:
-  - '**'
+  - "**"
 ```
 
 Run `pnpm recursive install`.
@@ -45,22 +45,22 @@ Run `pnpm recursive install`.
 
 Added in: v2.17.0
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 When `true`, pnpm creates a single `shrinkwrap.yaml` file in the root of the workspace (in the directory that contains the `pnpm-workspace.yaml` file).
 A shared shrinkwrap also means that all dependencies of all workspace packages will be in a single `node_modules`.
 
 Advantages of this option:
 
-* every dependency is a singleton
-* faster installations in a multi-package repository
-* fewer changes in code reviews
+- every dependency is a singleton
+- faster installations in a multi-package repository
+- fewer changes in code reviews
 
 **NOTE:** even though all the dependencies will be hard linked into the root `node_modules`, packages will have access only to those dependencies
 that are declared in their `package.json`. So pnpm's strictness is preserved.
 
-### -- &lt;package_selector>..., --filter &lt;package_selector>
+### -- \<package_selector>..., --filter \<package_selector>
 
 Added in: v2.13.0
 
@@ -70,7 +70,7 @@ Filters allow to restrict commands to a subset of packages.
 A rich selector syntax is supported for picking packages by name
 or by relation.
 
-#### --filter &lt;package_name>
+#### --filter \<package_name>
 
 Added in: v2.13.0
 
@@ -87,7 +87,7 @@ pnpm recursive install -- @babel/core
 pnpm recursive install -- @babel/*
 ```
 
-#### --filter &lt;package_name>...
+#### --filter \<package_name>...
 
 Added in: v2.13.0
 
@@ -108,7 +108,7 @@ pnpm recursive install --filter @babel/preset-*...
 pnpm recursive install -- @babel/preset-*...
 ```
 
-#### --filter ...&lt;package_name>
+#### --filter ...\<package_name>
 
 Added in: 2.14.0
 
@@ -130,7 +130,7 @@ pnpm recursive install --filter ...foo --filter bar --filter qar...
 pnpm recursive install -- ...foo bar qar...
 ```
 
-#### --filter ./&lt;directory>
+#### --filter ./\<directory>
 
 Added in: v2.15.0
 
@@ -138,8 +138,8 @@ Added in: v2.15.0
 
 Added in: v2.13.0
 
-* Default: **4**
-* Type: **Number**
+- Default: **4**
+- Type: **Number**
 
 Set the maximum number of concurrency. For unlimited concurrency use `Infinity`.
 
@@ -147,8 +147,8 @@ Set the maximum number of concurrency. For unlimited concurrency use `Infinity`.
 
 Added in: v2.13.0
 
-* Default: **true**
-* Type: **Boolean**
+- Default: **true**
+- Type: **Boolean**
 
 If true, stops when a task throws an error.
 
@@ -162,8 +162,8 @@ pnpm recursive test --no-bail
 
 Added in: v2.14.0
 
-* Default: **true**
-* Type: **Boolean**
+- Default: **true**
+- Type: **Boolean**
 
 When `true`, packages are sorted topologically (dependencies before dependents). Pass `--no-sort` to disable.
 

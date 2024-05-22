@@ -7,13 +7,12 @@ Create a tarball from a package.
 
 ## Options
 
-### --pack-destination &lt;dir\>
+### --pack-destination \<dir\>
 
 Directory in which `pnpm pack` will save tarballs. The default is the current working directory.
 
 ## Life Cycle Scripts
 
-* `prepack`
-* `prepare`
-* `postpack`
-
+- `prepack`
+- `prepare`
+- `postpack`

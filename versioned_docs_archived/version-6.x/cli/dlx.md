@@ -24,7 +24,7 @@ pnpm dlx create-react-app@next ./my-app
 
 ## Options
 
-### --package &lt;name\>
+### --package \<name\>
 
 The package to install before running the command.
 

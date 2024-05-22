@@ -74,7 +74,7 @@ These environment variables may be used to get contextual information about the 
 
 These are the environment variables created by pnpm:
 
-* **npm_command** - contains the name of the executed command. If the executed command is `pnpm run`, then the value of this variable will be "run-script".
+- **npm_command** - contains the name of the executed command. If the executed command is `pnpm run`, then the value of this variable will be "run-script".
 
 ## Options
 
@@ -104,8 +104,8 @@ webpack --watch --no-color
 
 ### script-shell
 
-* Default: **null**
-* Type: **path**
+- Default: **null**
+- Type: **path**
 
 The shell to use for scripts run with the `pnpm run` command.
 
@@ -117,8 +117,8 @@ pnpm config set script-shell "C:\\Program Files\\git\\bin\\bash.exe"
 
 ### shell-emulator
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 When `true`, pnpm will use a JavaScript implementation of a [bash-like shell] to
 execute scripts.
@@ -167,13 +167,13 @@ Aggregate output from child processes that are run in parallel, and only print o
 
 ### enable-pre-post-scripts
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 When `true`, pnpm will run any pre/post scripts automatically. So running `pnpm foo`
 will be like running `pnpm prefoo && pnpm foo && pnpm postfoo`.
 
-### --resume-from &lt;package_name\>
+### --resume-from \<package_name\>
 
 Added in: v7.22.0
 
@@ -203,6 +203,6 @@ An example of a `pnpm-exec-summary.json` file:
 
 Possible values of `status` are: 'passed', 'queued', 'running'.
 
-### --filter &lt;package_selector\>
+### --filter \<package_selector\>
 
 [Read more about filtering.](../filtering.md)

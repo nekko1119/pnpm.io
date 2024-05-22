@@ -14,11 +14,11 @@ update specific dependencies.
 ## TL;DR
 
 | Command              | Meaning                                                                  |
-|----------------------|--------------------------------------------------------------------------|
-|`pnpm up`             | Updates all dependencies, adhering to ranges specified in `package.json` |
-|`pnpm up --latest`    | Updates all dependencies, ignoring ranges specified in `package.json`    |
-|`pnpm up foo@2`       | Updates `foo` to the latest version on v2                                |
-|`pnpm up "@babel/*"` | Updates all dependencies under the `@babel` scope                        |
+| -------------------- | ------------------------------------------------------------------------ |
+| `pnpm up`            | Updates all dependencies, adhering to ranges specified in `package.json` |
+| `pnpm up --latest`   | Updates all dependencies, ignoring ranges specified in `package.json`    |
+| `pnpm up foo@2`      | Updates `foo` to the latest version on v2                                |
+| `pnpm up "@babel/*"` | Updates all dependencies under the `@babel` scope                        |
 
 ## Options
 
@@ -80,6 +80,6 @@ Added in: v4.8.0
 
 Show outdated dependencies and select which ones to update.
 
-### --filter &lt;package_selector\>
+### --filter \<package_selector\>
 
 [Read more about filtering.](../filtering.md)

@@ -26,6 +26,6 @@ pnpm multi unlink [--filter <package_selector>] [<pkg>...]
 Unlink in every package found in subdirectories
 or in every workspace package, when executed inside a [workspace](../workspaces.md).
 
-### --filter &lt;package_selector>
+### --filter \<package_selector>
 
 [Read more about filtering.](../filtering.md)

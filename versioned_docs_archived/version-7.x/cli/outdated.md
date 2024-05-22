@@ -7,6 +7,7 @@ Checks for outdated packages. The check can be limited to a subset of the
 installed packages by providing arguments (patterns are supported).
 
 Examples:
+
 ```sh
 pnpm outdated
 pnpm outdated "*gulp-*" @babel/core
@@ -19,7 +20,7 @@ pnpm outdated "*gulp-*" @babel/core
 Check for outdated dependencies in every package found in subdirectories, or in
 every workspace package when executed inside a workspace.
 
-### --filter &lt;package_selector\>
+### --filter \<package_selector\>
 
 [Read more about filtering.](../filtering.md)
 
@@ -31,12 +32,12 @@ List outdated global packages.
 
 Print details.
 
-### --format &lt;format\>
+### --format \<format\>
 
 Added in: v7.15.0
 
-* Default: **table**
-* Type: **table**, **list**, **json**
+- Default: **table**
+- Type: **table**, **list**, **json**
 
 Prints the outdated dependencies in the given format.
 

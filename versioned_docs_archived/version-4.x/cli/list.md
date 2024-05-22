@@ -46,7 +46,7 @@ Show parseable output instead of tree view.
 
 List packages in the global install directory instead of in the current project.
 
-### --depth &lt;number>
+### --depth \<number>
 
 Max display depth of the dependency tree.
 
@@ -65,6 +65,6 @@ Display only the dependency graph for packages in `devDependencies`.
 
 Don't display packages from `optionalDependencies`.
 
-### --filter &lt;package_selector>
+### --filter \<package_selector>
 
 [Read more about filtering.](../filtering.md)

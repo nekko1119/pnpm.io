@@ -57,8 +57,8 @@ If for some reason you need the pre/post scripts behavior of npm, use the
 
 Added in: v5.10.0
 
-* Default: **null**
-* Type: **path**
+- Default: **null**
+- Type: **path**
 
 The shell to use for scripts run with the `pnpm run` command.
 
@@ -72,8 +72,8 @@ pnpm config set script-shell "C:\\Program Files\\git\\bin\\bash.exe"
 
 Added in: v5.8.0
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 When `true`, pnpm will use a JavaScript implementation of a [bash-like shell] to
 execute scripts.
@@ -132,12 +132,12 @@ Aggregate output from child processes that are run in parallel, and only print o
 
 Added in: v6.1.0
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 When `true`, pnpm will run any pre/post scripts automatically. So running `pnpm foo`
 will be like running `pnpm prefoo && pnpm foo && pnpm postfoo`.
 
-### --filter &lt;package_selector\>
+### --filter \<package_selector\>
 
 [Read more about filtering.](../filtering.md)

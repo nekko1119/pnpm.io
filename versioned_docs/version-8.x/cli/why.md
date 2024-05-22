@@ -44,7 +44,7 @@ Only display the dependency tree for packages in `dependencies`.
 
 Only display the dependency tree for packages in `devDependencies`.
 
-### --depth &lt;number\>
+### --depth \<number\>
 
 Display only dependencies within a specific depth.
 
@@ -52,6 +52,6 @@ Display only dependencies within a specific depth.
 
 Display only dependencies that are also projects within the workspace.
 
-### --filter &lt;package_selector\>
+### --filter \<package_selector\>
 
 [Read more about filtering.](../filtering.md)

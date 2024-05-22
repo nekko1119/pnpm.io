@@ -21,7 +21,7 @@ pnpm patch <pkg name>@<version>
 
 ## Options
 
-### --edit-dir &lt;dir>
+### --edit-dir \<dir>
 
 The package that needs to be patched will be extracted to this directory.
 

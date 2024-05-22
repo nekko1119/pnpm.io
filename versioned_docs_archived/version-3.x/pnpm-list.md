@@ -29,7 +29,7 @@ Show parseable output instead of tree view.
 
 List packages in the global install prefix instead of in the current project.
 
-### --depth &lt;number>
+### --depth \<number>
 
 Max display depth of the dependency tree.
 

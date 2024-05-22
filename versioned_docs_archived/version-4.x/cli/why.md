@@ -4,7 +4,7 @@ title: pnpm why
 original_id: why
 ---
 
-Shows the packages that depend on &lt;pkg>
+Shows the packages that depend on \<pkg>
 
 ## Synopsis
 
@@ -49,6 +49,6 @@ Display only the dependency tree for packages in `dependencies`.
 
 Display only the dependency tree for packages in `devDependencies`.
 
-### --filter &lt;package_selector>
+### --filter \<package_selector>
 
 [Read more about filtering.](../filtering.md)

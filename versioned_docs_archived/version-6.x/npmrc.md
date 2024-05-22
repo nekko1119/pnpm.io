@@ -11,11 +11,11 @@ user and global `.npmrc` files.
 
 The four relevant files are:
 
-* per-project configuration file (`/path/to/my/project/.npmrc`)
-* per-workspace configuration file (the directory that contains the
-`pnpm-workspace.yaml` file)
-* per-user configuration file (`~/.npmrc`)
-* global configuration file (`/etc/npmrc`)
+- per-project configuration file (`/path/to/my/project/.npmrc`)
+- per-workspace configuration file (the directory that contains the
+  `pnpm-workspace.yaml` file)
+- per-user configuration file (`~/.npmrc`)
+- global configuration file (`/etc/npmrc`)
 
 All `.npmrc` files are an [INI-formatted] list of `key = value` parameters.
 
@@ -27,8 +27,8 @@ All `.npmrc` files are an [INI-formatted] list of `key = value` parameters.
 
 Added in: v4.0.0
 
-* Default: **true**
-* Type: **boolean**
+- Default: **true**
+- Type: **boolean**
 
 When `true`, all dependencies are hoisted to `node_modules/.pnpm`. This makes
 unlisted dependencies accessible to all packages inside `node_modules`.
@@ -37,8 +37,8 @@ unlisted dependencies accessible to all packages inside `node_modules`.
 
 Added in: v4.0.0
 
-* Default: **['\*']**
-* Type: **string[]**
+- Default: **['\*']**
+- Type: **string[]**
 
 Tells pnpm which packages should be hoisted to `node_modules/.pnpm`. By
 default, all packages are hoisted - however, if you know that only some flawed
@@ -56,8 +56,8 @@ hoist-pattern[]=*babel*
 
 Added in: v5.2.0
 
-* Default: **['\*types\*', '\*eslint\*', '@prettier/plugin-\*', '\*prettier-plugin-\*']**
-* Type: **string[]**
+- Default: **['\*types\*', '\*eslint\*', '@prettier/plugin-\*', '\*prettier-plugin-\*']**
+- Type: **string[]**
 
 Unlike `hoist-pattern`, which hoists dependencies to a hidden modules directory
 inside the virtual store, `public-hoist-pattern` hoists dependencies matching
@@ -81,8 +81,8 @@ Note: Setting `shamefully-hoist` to `true` is the same as setting
 
 Added in: v1.34.0 as `shamefully-flatten`, renamed in v4.0.0
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 By default, pnpm creates a semistrict `node_modules`, meaning dependencies have
 access to undeclared dependencies but modules outside of `node_modules` do not.
@@ -96,8 +96,8 @@ root of `node_modules`, you can set this to `true` to hoist them for you.
 
 Added in: v4.2.0 as `store`
 
-* Default: **~/.pnpm-store**
-* Type: **path**
+- Default: **~/.pnpm-store**
+- Type: **path**
 
 The location where all the packages are saved on the disk.
 
@@ -117,8 +117,8 @@ only possible on the same filesystem.
 
 Added in: v4.14.0
 
-* Default: **node_modules**
-* Type: **path**
+- Default: **node_modules**
+- Type: **path**
 
 The directory in which dependencies will be installed (instead of
 `node_modules`).
@@ -127,19 +127,19 @@ The directory in which dependencies will be installed (instead of
 
 Added in: v5.9.0
 
-* Default: **isolated**
-* Type: **isolated**, **hoisted**, **pnp**
+- Default: **isolated**
+- Type: **isolated**, **hoisted**, **pnp**
 
 Defines what linker should be used for installing Node packages.
 
-* **isolated** - dependencies are symlinked from a virtual store at `node_modules/.pnpm`.
-* **hoisted** - a flat `node_modules` without symlinks is created. Same as the `node_modules` created by npm or Yarn Classic. Legitimate reasons to use this setting:
+- **isolated** - dependencies are symlinked from a virtual store at `node_modules/.pnpm`.
+- **hoisted** - a flat `node_modules` without symlinks is created. Same as the `node_modules` created by npm or Yarn Classic. Legitimate reasons to use this setting:
   1. Your tooling doesn't work well with symlinks. A React Native project will most probably only work if you use a hoisted `node_modules`.
   1. Your project is deployed to a serverless hosting provider. Some serverless providers (for instance, AWS Lambda) don't support symlinks. An alternative solution for this problem is to bundle your application before deployment.
   1. If you want to publish your package with [`"bundledDependencies"`].
   1. If you are running Node.js with the [--preserve-symlinks] flag.
-* **pnp** - no `node_modules`. Plug'n'Play is an innovative strategy for Node that is [used by Yarn Berry][pnp]. It is recommended to also set `symlink` setting to `false` when using `pnp` as
-your linker.
+- **pnp** - no `node_modules`. Plug'n'Play is an innovative strategy for Node that is [used by Yarn Berry][pnp]. It is recommended to also set `symlink` setting to `false` when using `pnp` as
+  your linker.
 
 [pnp]: https://yarnpkg.com/features/pnp
 [--preserve-symlinks]: https://nodejs.org/api/cli.html#cli_preserve_symlinks
@@ -149,8 +149,8 @@ your linker.
 
 Added in: v5.9.0
 
-* Default: **true**
-* Type: **Boolean**
+- Default: **true**
+- Type: **Boolean**
 
 When `symlink` is set to `false`, pnpm creates a virtual store directory without
 any symlinks. It is a useful setting together with `node-linker=pnp`.
@@ -159,8 +159,8 @@ any symlinks. It is a useful setting together with `node-linker=pnp`.
 
 Added in: v5.15.0
 
-* Default: **true**
-* Type: **Boolean**
+- Default: **true**
+- Type: **Boolean**
 
 When `false`, pnpm will not write any files to the modules directory
 (`node_modules`). This is useful for when the modules directory is mounted with
@@ -173,8 +173,8 @@ mount a modules directory with FUSE: [@pnpm/mount-modules].
 
 Added in: v4.1.0
 
-* Default: **node_modules/.pnpm**
-* Types: **path**
+- Default: **node_modules/.pnpm**
+- Types: **path**
 
 The directory with links to the store. All direct and indirect dependencies of
 the project are linked into this directory.
@@ -195,24 +195,24 @@ root is shared).
 
 Added in: v1.25.0
 
-* Default: **auto**
-* Type: **auto**, **hardlink**, **copy**, **clone**
+- Default: **auto**
+- Type: **auto**, **hardlink**, **copy**, **clone**
 
 Controls the way packages are imported from the store.
 
-* **auto** - try to clone packages from the store. If cloning is not supported
-then hardlink packages from the store. If neither cloning nor linking is
-possible, fall back to copying
-* **hardlink** - hard link packages from the store
-* **copy** - copy packages from the store
-* **clone** - clone (AKA copy-on-write or reference link) packages from the store
+- **auto** - try to clone packages from the store. If cloning is not supported
+  then hardlink packages from the store. If neither cloning nor linking is
+  possible, fall back to copying
+- **hardlink** - hard link packages from the store
+- **copy** - copy packages from the store
+- **clone** - clone (AKA copy-on-write or reference link) packages from the store
 
 ### modules-cache-max-age
 
 Added in: v6.0.0
 
-* Default: **10080** (7 days in minutes)
-* Type: **number**
+- Default: **10080** (7 days in minutes)
+- Type: **number**
 
 The time in minutes after which orphan packages from the modules directory should be removed.
 pnpm keeps a cache of packages in the modules directory. This boosts installation speed when
@@ -224,8 +224,8 @@ switching branches or downgrading dependencies.
 
 Added in: v1.32.0 as `shrinkwrap`
 
-* Default: **true**
-* Type: **Boolean**
+- Default: **true**
+- Type: **Boolean**
 
 When set to `false`, pnpm won't read or generate a `pnpm-lock.yaml` file.
 
@@ -233,25 +233,24 @@ When set to `false`, pnpm won't read or generate a `pnpm-lock.yaml` file.
 
 Added in: v1.37.1 as `prefer-frozen-shrinkwrap`
 
-* Default: **true** (from v1.38.0)
-* Type: **Boolean**
+- Default: **true** (from v1.38.0)
+- Type: **Boolean**
 
 When set to `true` and the available `pnpm-lock.yaml` satisfies the
 `package.json` dependencies directive, a headless installation is performed. A
 headless installation skips all dependency resolution as it does not need to
 modify the lockfile.
 
-
 ## Registry & Authentication Settings
 
 ### registry
 
-* Default: **https://registry.npmjs.org/**
-* Type: **url**
+- Default: **https://registry.npmjs.org/**
+- Type: **url**
 
 The base URL of the npm package registry (trailing slash included).
 
-#### &lt;scope\>:registry
+#### \<scope\>:registry
 
 The npm registry that should be used for packages of the specified scope. For
 example, setting `@babel:registry=https://example.com/packages/npm/`
@@ -259,13 +258,13 @@ will enforce that when you use `pnpm add @babel/core`, or any `@babel` scoped
 package, the package will be fetched from `https://example.com/packages/npm`
 instead of the default registry.
 
-### &lt;URL\>:_authToken
+### \<URL\>:\_authToken
 
 Define the authentication bearer token to use when accessing the specified
 registry. For example:
 
 ```sh
-//registry.npmjs.org/:_authToken=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx 
+//registry.npmjs.org/:_authToken=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
 You may also use an environment variable. For example:
@@ -274,7 +273,7 @@ You may also use an environment variable. For example:
 //registry.npmjs.org/:_authToken=${NPM_TOKEN}
 ```
 
-### &lt;URL\>:tokenHelper
+### \<URL\>:tokenHelper
 
 Added in: v6.25.0
 
@@ -298,8 +297,8 @@ Setting a token helper for the specified registry:
 
 ### ca
 
-* Default: **The npm CA certificate**
-* Type: **String, Array or null**
+- Default: **The npm CA certificate**
+- Type: **String, Array or null**
 
 The Certificate Authority signing certificate that is trusted for SSL
 connections to the registry. Values should be in PEM format (AKA
@@ -323,8 +322,8 @@ See also the `strict-ssl` config.
 
 ### cafile
 
-* Default: **null**
-* Type: **path**
+- Default: **null**
+- Type: **path**
 
 A path to a file containing one or multiple Certificate Authority signing
 certificates. Similar to the `ca` setting, but allows for multiple CAs, as well
@@ -333,8 +332,8 @@ CLI.
 
 ### cert
 
-* Default: **null**
-* Type: **String**
+- Default: **null**
+- Type: **String**
 
 A client certificate to pass when accessing the registry. Values should be in
 PEM format (AKA "Base-64 encoded X.509 (.CER)"). For example:
@@ -347,8 +346,8 @@ It is not the path to a certificate file (and there is no `certfile` option).
 
 ### https-proxy
 
-* Default: **null**
-* Type: **url**
+- Default: **null**
+- Type: **url**
 
 A proxy to use for outgoing HTTPS requests. If the `HTTPS_PROXY`, `https_proxy`,
 `HTTP_PROXY` or `http_proxy` environment variables are set, their values will be
@@ -356,8 +355,8 @@ used instead.
 
 ### key
 
-* Default: **null**
-* Type: **String**
+- Default: **null**
+- Type: **String**
 
 A client key to pass when accessing the registry. Values should be in PEM format
 (AKA "Base-64 encoded X.509 (.CER)"). For example:
@@ -370,16 +369,16 @@ It is not the path to a key file (and there is no `keyfile` option).
 
 ### local-address
 
-* Default: **undefined**
-* Type: **IP Address**
+- Default: **undefined**
+- Type: **IP Address**
 
 The IP address of the local interface to use when making connections to the npm
 registry.
 
 ### proxy
 
-* Default: **null**
-* Type: **url**
+- Default: **null**
+- Type: **url**
 
 A proxy to use for outgoing http requests. If the HTTP_PROXY or http_proxy
 environment variables are set, proxy settings will be honored by the underlying
@@ -389,8 +388,8 @@ request library.
 
 Added in: v6.18.0
 
-* Default: **network-concurrency x 3**
-* Type: **Number**
+- Default: **network-concurrency x 3**
+- Type: **Number**
 
 The maximum number of connections to use per origin (protocol/host/port combination).
 
@@ -398,15 +397,15 @@ The maximum number of connections to use per origin (protocol/host/port combinat
 
 Added in: v5.18.8
 
-* Default: **null**
-* Type: **String**
+- Default: **null**
+- Type: **String**
 
 A comma-separated string of domain extensions that a proxy should not be used for.
 
 ### strict-ssl
 
-* Default: **true**
-* Type: **Boolean**
+- Default: **true**
+- Type: **Boolean**
 
 Whether or not to do SSL key validation when making requests to the registry via
 HTTPS.
@@ -415,36 +414,36 @@ See also the `ca` option.
 
 ### network-concurrency
 
-* Default: **16**
-* Type: **Number**
+- Default: **16**
+- Type: **Number**
 
 Controls the maximum number of HTTP(S) requests to process simultaneously.
 
 ### fetch-retries
 
-* Default: **2**
-* Type: **Number**
+- Default: **2**
+- Type: **Number**
 
 How many times to retry if pnpm fails to fetch from the registry.
 
 ### fetch-retry-factor
 
-* Default: **10**
-* Type: **Number**
+- Default: **10**
+- Type: **Number**
 
 The exponential factor for retry backoff.
 
 ### fetch-retry-mintimeout
 
-* Default: **10000 (10 seconds)**
-* Type: **Number**
+- Default: **10000 (10 seconds)**
+- Type: **Number**
 
 The minimum (base) timeout for retrying requests.
 
 ### fetch-retry-maxtimeout
 
-* Default: **60000 (1 minute)**
-* Type: **Number**
+- Default: **60000 (1 minute)**
+- Type: **Number**
 
 The maximum fallback timeout to ensure the retry factor does not make requests
 too long.
@@ -453,8 +452,8 @@ too long.
 
 Added in: v6.2.0
 
-* Default: **60000 (1 minute)**
-* Type: **Number**
+- Default: **60000 (1 minute)**
+- Type: **Number**
 
 The maximum amount of time to wait for HTTP requests to complete.
 
@@ -464,8 +463,8 @@ The maximum amount of time to wait for HTTP requests to complete.
 
 Added in: v6.26.0
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 When `true`, any missing non-optional peer dependencies are automatically installed.
 
@@ -473,8 +472,8 @@ When `true`, any missing non-optional peer dependencies are automatically instal
 
 Added in: v2.15.0
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 If this is enabled, commands will fail if there is a missing or invalid peer
 dependency in the tree.
@@ -485,24 +484,24 @@ dependency in the tree.
 
 Added in: v4.1.0
 
-* Default: **auto**
-* Type: **auto**, **always**, **never**
+- Default: **auto**
+- Type: **auto**, **always**, **never**
 
 Controls colors in the output.
 
-* **auto** - output uses colors when the standard output is a terminal or TTY.
-* **always** - ignore the difference between terminals and pipes. You’ll rarely
+- **auto** - output uses colors when the standard output is a terminal or TTY.
+- **always** - ignore the difference between terminals and pipes. You’ll rarely
   want this; in most scenarios, if you want color codes in your redirected
   output, you can instead pass a `--color` flag to the pnpm command to force it
   to use color codes. The default setting is almost always what you’ll want.
-* **never** - turns off colors. This is the setting used by `--no-color`.
+- **never** - turns off colors. This is the setting used by `--no-color`.
 
 ### loglevel
 
 Added in: v4.13.0
 
-* Default: **info**
-* Type: **debug**, **info**, **warn**, **error**
+- Default: **info**
+- Type: **debug**, **info**, **warn**, **error**
 
 Any logs at or higher than the given level will be shown.
 You can instead pass `--silent` to turn off all output logs.
@@ -511,8 +510,8 @@ You can instead pass `--silent` to turn off all output logs.
 
 Added in: v3.6.0
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 Experimental option that enables beta features of the CLI. This means that you
 may get some changes to the CLI functionality that are breaking changes, or
@@ -522,8 +521,8 @@ potentially bugs.
 
 Added in: v5.4.0
 
-* Default: **true**
-* Type: **Boolean**
+- Default: **true**
+- Type: **Boolean**
 
 If this is enabled, the primary behaviour of `pnpm install` becomes that of
 `pnpm install -r`, meaning the install is performed on all workspace or
@@ -534,8 +533,8 @@ directory.
 
 ### engine-strict
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 If this is enabled, pnpm will not install any package that claims to not be
 compatible with the current Node version.
@@ -547,7 +546,7 @@ Regardless of this configuration, installation will always fail if a project
 
 Added in: v4.8.0
 
-* Type: **path**
+- Type: **path**
 
 The location of the npm binary that pnpm uses for some actions, like publishing.
 
@@ -555,8 +554,8 @@ The location of the npm binary that pnpm uses for some actions, like publishing.
 
 ### child-concurrency
 
-* Default: **5**
-* Type: **Number**
+- Default: **5**
+- Type: **Number**
 
 The maximum number of child processes to allocate simultaneously to build
 node_modules.
@@ -565,8 +564,8 @@ node_modules.
 
 Added in: v1.31.0
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 Use and cache the results of (pre/post)install hooks.
 
@@ -574,15 +573,15 @@ Use and cache the results of (pre/post)install hooks.
 
 Added in: v1.31.0
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 Only use the side effects cache if present, do not create it for new packages.
 
 ### unsafe-perm
 
-* Default: **false** IF running as root, ELSE **true**
-* Type: **Boolean**
+- Default: **false** IF running as root, ELSE **true**
+- Type: **Boolean**
 
 Set to true to enable UID/GID switching when running package scripts.
 If set explicitly to false, then installing as a non-root user will fail.
@@ -593,19 +592,19 @@ If set explicitly to false, then installing as a non-root user will fail.
 
 Added in: v6.5.0
 
-* Default: **undefined**
-* Type: **semver**
+- Default: **undefined**
+- Type: **semver**
 
 Specifies which exact Node.js version should be used for the project's runtime.
 pnpm will automatically install the specified version of Node.js and use it for
 running `pnpm run` commands or the `pnpm node` command.
 
-### node-mirror:&lt;releaseDir>
+### node-mirror:\<releaseDir>
 
 Added in: v6.24.0
 
-* Default: **`https://nodejs.org/download/<releaseDir>/`**
-* Type: **URL**
+- Default: **`https://nodejs.org/download/<releaseDir>/`**
+- Type: **URL**
 
 Sets the base URL for downloading Node.js. The `<releaseDir>` portion of this setting can be any directory from <https://nodejs.org/download>: `release`, `rc`, `nightly`, `v8-canary`, etc.
 
@@ -623,16 +622,16 @@ node-mirror:nightly=https://npmmirror.com/mirrors/node-nightly/
 
 Added in: v2.5.0
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 Only allows installation with a store server. If no store server is running,
 installation will fail.
 
 ### save-prefix
 
-* Default: **'^'**
-* Type: **String**
+- Default: **'^'**
+- Type: **String**
 
 Configure how versions of packages installed to a `package.json` file get
 prefixed.
@@ -648,8 +647,8 @@ instance, `pnpm add foo@2` will set the version of `foo` in `package.json` to
 
 ### tag
 
-* Default: **latest**
-* Type: **String**
+- Default: **latest**
+- Type: **String**
 
 If you `pnpm add` a package and you don't provide a specific version, then it
 will install the package at the version registered under the tag from this
@@ -662,8 +661,8 @@ This also sets the tag that is added to the `package@version` specified by the
 
 Added in: v4.2.0
 
-* Default: **&lt;path to node\>/pnpm-global**
-* Type: **path**
+- Default: **\<path to node\>/pnpm-global**
+- Type: **path**
 
 Specify a custom directory to store global packages.
 
@@ -677,8 +676,8 @@ Allows to set the target directory for the bin files of globally installed packa
 
 Added in: v6.10.0
 
-* Default: **$XDG_STATE_HOME/pnpm**
-* Type: **path**
+- Default: **$XDG_STATE_HOME/pnpm**
+- Type: **path**
 
 The directory where pnpm creates the `pnpm-state.json` file that is currently used only by the update checker.
 
@@ -686,8 +685,8 @@ The directory where pnpm creates the `pnpm-state.json` file that is currently us
 
 Added in: v6.10.0
 
-* Default: **$XDG_CACHE_HOME/pnpm**
-* Type: **path**
+- Default: **$XDG_CACHE_HOME/pnpm**
+- Type: **path**
 
 The location of the package metadata cache.
 
@@ -695,8 +694,8 @@ The location of the package metadata cache.
 
 Added in: v6.5.0
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 When true, all the output is written to stderr.
 
@@ -704,8 +703,8 @@ When true, all the output is written to stderr.
 
 Added in: v6.16.0
 
-* Default: **true**
-* Type: **Boolean**
+- Default: **true**
+- Type: **Boolean**
 
 When `false`, the `NODE_PATH` environment variable is not set in the command shims.
 It is recommended to set this setting to `false` if you are getting the next error, when running commands:
@@ -716,7 +715,7 @@ It is recommended to set this setting to `false` if you are getting the next err
 
 Added in: v6.29.0
 
-* Default: **true**
-* Type: **Boolean**
+- Default: **true**
+- Type: **Boolean**
 
 Set to `false` to suppress the update notification when using an older version of pnpm than the latest.

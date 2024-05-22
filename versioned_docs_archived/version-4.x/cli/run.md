@@ -40,6 +40,6 @@ You can use the `--if-present` flag to avoid exiting with a non-zero exit code
 when the script is undefined. This lets you run potentially undefined scripts
 without breaking the execution chain.
 
-### --filter &lt;package_selector>
+### --filter \<package_selector>
 
 [Read more about filtering.](../filtering.md)

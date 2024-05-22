@@ -22,10 +22,9 @@ pnpm --filter <package_selector> <command>
 
 :::
 
-
 ## Matching
 
-### --filter &lt;package_name>
+### --filter \<package_name>
 
 Added in: v2.13.0
 
@@ -46,7 +45,7 @@ Specifying the scope of the package is optional, so `--filter=core` will pick `@
 However, if the workspace has multiple packages with the same name (for instance, `@babel/core` and `@types/core`),
 then filtering without scope will pick nothing.
 
-### --filter &lt;package_name>...
+### --filter \<package_name>...
 
 Added in: v2.13.0
 
@@ -64,7 +63,7 @@ You may use a pattern to select a set of root packages:
 pnpm --filter "@babel/preset-*..." test
 ```
 
-### --filter &lt;package_name>^...
+### --filter \<package_name>^...
 
 Added in: v4.4.0
 
@@ -77,7 +76,7 @@ dependencies:
 pnpm --filter "foo^..." test
 ```
 
-### --filter ...&lt;package_name>
+### --filter ...\<package_name>
 
 Added in: v2.14.0
 
@@ -89,7 +88,7 @@ run the tests of `foo` and all packages dependent on it:
 pnpm --filter ...foo test
 ```
 
-### --filter "...^&lt;package_name>"
+### --filter "...^\<package_name>"
 
 Added in: v4.4.0
 
@@ -101,14 +100,14 @@ run tests for all packages dependent on `foo`:
 pnpm --filter "...^foo" test
 ```
 
-### --filter ./&lt;directory>
+### --filter ./\<directory>
 
 Added in: v2.15.0
 
 To only select packages under the specified directory, you may specify any
 relative path, typically in POSIX format.
 
-### --filter {&lt;directory>}
+### --filter {\<directory>}
 
 Added in: v4.7.0
 
@@ -142,7 +141,7 @@ pnpm --filter "@babel/*{components}[origin/master]" <cmd>
 pnpm --filter "...@babel/*{components}[origin/master]" <cmd>
 ```
 
-### --filter "[&lt;since>]"
+### --filter "[\<since>]"
 
 Added in: v4.6.0
 
@@ -185,14 +184,14 @@ the selectors. You can use as many filters as you want:
 pnpm --filter ...foo --filter bar --filter baz... test
 ```
 
-## --filter-prod &lt;filtering_pattern>
+## --filter-prod \<filtering_pattern>
 
 Added in: v6.2.0
 
 Acts the same a `--filter` but omits `devDependencies` when selecting dependency projects
 from the workspace.
 
-## --test-pattern &lt;glob>
+## --test-pattern \<glob>
 
 Added in: v5.14.0
 

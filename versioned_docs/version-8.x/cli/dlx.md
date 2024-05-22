@@ -22,7 +22,7 @@ pnpm dlx create-react-app@next ./my-app
 
 ## Options
 
-### --package &lt;name\>
+### --package \<name\>
 
 The package to install before running the command.
 
@@ -43,7 +43,7 @@ pnpm --package=yo --package=generator-webapp dlx yo webapp --skip-install
 
 Runs the command inside of a shell. Uses `/bin/sh` on UNIX and `\cmd.exe` on Windows.
 
-Example: 
+Example:
 
 ```
 pnpm --package cowsay --package lolcatjs -c dlx 'echo "hi pnpm" | cowsay | lolcatjs'

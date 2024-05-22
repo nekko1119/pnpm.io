@@ -16,7 +16,7 @@ has a license of its own).
 
 You may override some fields before publish, using the
 [publishConfig] field in `package.json`.
-You also can use the [`publishConfig.directory`](../package_json.md#publishconfigdirectory) to customize the published subdirectory (usually using third party build tools). 
+You also can use the [`publishConfig.directory`](../package_json.md#publishconfigdirectory) to customize the published subdirectory (usually using third party build tools).
 
 When running this command recursively (`pnpm -r publish`), pnpm will publish all
 the packages that have versions not yet published to the registry.
@@ -25,7 +25,7 @@ the packages that have versions not yet published to the registry.
 
 ## Options
 
-### --tag &lt;tag\>
+### --tag \<tag\>
 
 Publishes the package with the given tag. By default, `pnpm publish` updates
 the `latest` tag.
@@ -39,7 +39,7 @@ pnpm publish --tag next
 pnpm add foo@next
 ```
 
-### --access &lt;public|restricted\>
+### --access \<public|restricted\>
 
 Tells the registry whether the published package should be public or restricted.
 
@@ -47,8 +47,8 @@ Tells the registry whether the published package should be public or restricted.
 
 Added in: v4.11.0
 
-* Default : **true** (since v5)
-* Type: **Boolean**
+- Default : **true** (since v5)
+- Type: **Boolean**
 
 When true, `pnpm publish` checks if the current branch is your publish branch
 (master by default), clean, and up-to-date.
@@ -57,8 +57,8 @@ When true, `pnpm publish` checks if the current branch is your publish branch
 
 Added in: v4.11.0
 
-* Default: **master**
-* Types: **String**
+- Default: **master**
+- Types: **String**
 
 The primary branch of the repository which is used for publishing the latest
 changes.
@@ -76,7 +76,7 @@ Added in: v6.5.0
 
 Save the list of published packages to `pnpm-publish-summary.json`. Useful when some other tooling is used to report the list of published packages.
 
-### --filter &lt;package_selector\>
+### --filter \<package_selector\>
 
 Added in: 4.6.0
 

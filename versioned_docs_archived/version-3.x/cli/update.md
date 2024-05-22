@@ -10,11 +10,11 @@ Aliases: `up`
 
 ## tl;dr
 
-|Command|Meaning|
-|--|--|
-|`pnpm up` |updates all dependencies. Adheres ranges specified in `package.json` |
-|`pnpm up --latest` |updates all dependencies. Ignores ranges specified in `package.json` |
-|`pnpm up foo@2` |updates `foo` to the latest v2 |
+| Command            | Meaning                                                              |
+| ------------------ | -------------------------------------------------------------------- |
+| `pnpm up`          | updates all dependencies. Adheres ranges specified in `package.json` |
+| `pnpm up --latest` | updates all dependencies. Ignores ranges specified in `package.json` |
+| `pnpm up foo@2`    | updates `foo` to the latest v2                                       |
 
 ## Options
 
@@ -37,7 +37,7 @@ Added in: v3.2.0
 
 Ignores the version range specified in `package.json`. Instead, the version specified by the `latest` tag will be used (potentially upgrading the packages across major versions).
 
-### --filter &lt;package_selector>
+### --filter \<package_selector>
 
 [Read more about filtering.](../filtering.md)
 

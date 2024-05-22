@@ -76,6 +76,6 @@ Added in: v6.31.0
 
 Runs the command inside of a shell. Uses `/bin/sh` on UNIX and `\cmd.exe` on Windows.
 
-### --filter &lt;package_selector\>
+### --filter \<package_selector\>
 
 [Read more about filtering.](../filtering.md)

@@ -14,11 +14,11 @@ use this overrides to force `lodash@^2.1.0`:
 
 ```json title="package.json"
 {
-    "pnpm": {
-        "overrides": {
-            "lodash@<2.1.0": "^2.1.0"
-        }
+  "pnpm": {
+    "overrides": {
+      "lodash@<2.1.0": "^2.1.0"
     }
+  }
 }
 ```
 
@@ -28,10 +28,10 @@ Or alternatively, run `pnpm audit --fix`.
 
 ## Options
 
-### --audit-level &lt;severity\>
+### --audit-level \<severity\>
 
-* Type: **low**, **moderate**, **high**, **critical**
-* Default: **low**
+- Type: **low**, **moderate**, **high**, **critical**
+- Default: **low**
 
 Only print advisories with severity greater than or equal to `<severity>`.
 

@@ -59,7 +59,7 @@ View package information for all packages. This should be used with the `--shell
 pnpm -rc exec pnpm view \$PNPM_PACKAGE_NAME
 ```
 
-### --resume-from &lt;package_name\>
+### --resume-from \<package_name\>
 
 Added in: v7.22.0
 
@@ -80,6 +80,6 @@ Runs the command inside of a shell. Uses `/bin/sh` on UNIX and `\cmd.exe` on Win
 
 [Read about this option in the run command docs](./run.md#--report-summary)
 
-### --filter &lt;package_selector\>
+### --filter \<package_selector\>
 
 [Read more about filtering.](../filtering.md)

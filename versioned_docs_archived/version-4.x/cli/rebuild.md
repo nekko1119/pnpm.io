@@ -21,6 +21,6 @@ pnpm rebuild [-r [--workspace-concurrency=<number>] [--no-sort]]
 
 This command runs the **pnpm build** command in every package of the monorepo.
 
-### --filter &lt;package_selector>
+### --filter \<package_selector>
 
 [Read more about filtering.](../filtering.md)

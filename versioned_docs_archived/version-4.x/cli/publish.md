@@ -21,7 +21,7 @@ the packages that have versions not yet published to the registry.
 
 ## Options
 
-### --tag &lt;tag>
+### --tag \<tag>
 
 Publishes the package with the given tag. By default, `pnpm publish` updates the `latest` tag.
 
@@ -34,11 +34,11 @@ pnpm publish --tag next
 pnpm add foo@next
 ```
 
-### --access &lt;public|restricted>
+### --access \<public|restricted>
 
 Tells the registry whether the published package should be public or restricted.
 
-### --filter &lt;package_selector>
+### --filter \<package_selector>
 
 Added in: 4.6.0
 

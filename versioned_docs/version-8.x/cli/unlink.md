@@ -13,7 +13,7 @@ removing the external link.
 
 :::info
 
-If you want to remove a link made with `pnpm link --global <package>`, you should use `pnpm uninstall --global <package>`. 
+If you want to remove a link made with `pnpm link --global <package>`, you should use `pnpm uninstall --global <package>`.
 `pnpm unlink` only removes the links in your current directory.
 
 :::
@@ -25,6 +25,6 @@ If you want to remove a link made with `pnpm link --global <package>`, you shoul
 Unlink in every package found in subdirectories or in every workspace package,
 when executed inside a [workspace](../workspaces.md).
 
-### --filter &lt;package_selector\>
+### --filter \<package_selector\>
 
 [Read more about filtering.](../filtering.md)

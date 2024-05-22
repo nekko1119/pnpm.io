@@ -47,8 +47,8 @@ in any workspace package's `scripts`.
 
 Added in: v5.10.0
 
-* Default: **null**
-* Type: **path**
+- Default: **null**
+- Type: **path**
 
 The shell to use for scripts run with the `pnpm run` command.
 
@@ -62,8 +62,8 @@ pnpm config set script-shell "C:\\Program Files\\git\\bin\\bash.exe"
 
 Added in: v5.8.0
 
-* Default: **false**
-* Type: **Boolean**
+- Default: **false**
+- Type: **Boolean**
 
 When `true`, pnpm will use a JavaScript implementation of a [bash-like shell] to
 execute scripts.
@@ -112,6 +112,6 @@ Added in: v5.1.0
 Stream output from child processes immediately, prefixed with the originating
 package directory. This allows output from different packages to be interleaved.
 
-### --filter &lt;package_selector\>
+### --filter \<package_selector\>
 
 [Read more about filtering.](../filtering.md)

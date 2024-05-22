@@ -8,13 +8,13 @@ By default, any new package is installed as a production dependency.
 
 ## TL;DR
 
-| Command                                | Meaning                            |
-|----------------------------------------|------------------------------------|
-| `pnpm add sax`                         | Save to `dependencies`             |
-| `pnpm add -D sax`                      | Save to `devDependencies`          |
-| `pnpm add -O sax`                      | Save to `optionalDependencies`     |
-| `pnpm add sax@next`                    | Install from the `next` tag        |
-| `pnpm add sax@3.0.0`                   | Specify version `3.0.0`            |
+| Command              | Meaning                        |
+| -------------------- | ------------------------------ |
+| `pnpm add sax`       | Save to `dependencies`         |
+| `pnpm add -D sax`    | Save to `devDependencies`      |
+| `pnpm add -O sax`    | Save to `optionalDependencies` |
+| `pnpm add sax@next`  | Install from the `next` tag    |
+| `pnpm add sax@3.0.0` | Specify version `3.0.0`        |
 
 ## Supported package locations
 
@@ -26,9 +26,9 @@ another registry, you can use the tarball link (see [the corresponding guide]).
 
 You may also install packages by:
 
-* tag: `pnpm add express@nightly`
-* version: `pnpm add express@1.0.0`
-* version range: `pnpm add express@2 react@">=0.1.0 <0.2.0"`
+- tag: `pnpm add express@nightly`
+- version: `pnpm add express@1.0.0`
+- version range: `pnpm add express@2 react@">=0.1.0 <0.2.0"`
 
 [the corresponding guide]: #install-from-remote-tarball
 
@@ -82,10 +82,10 @@ You can use a protocol for certain Git providers. For example,
 
 You may install from Git by:
 
-* latest commit from master: `pnpm add kevva/is-positive`
-* commit: `pnpm add kevva/is-positive#97edff6f525f192a3f83cea1944765f769ae2678`
-* branch: `pnpm add kevva/is-positive#master`
-* version range: `pnpm add kevva/is-positive#semver:^2.0.0`
+- latest commit from master: `pnpm add kevva/is-positive`
+- commit: `pnpm add kevva/is-positive#97edff6f525f192a3f83cea1944765f769ae2678`
+- branch: `pnpm add kevva/is-positive#master`
+- version range: `pnpm add kevva/is-positive#semver:^2.0.0`
 
 ## Options
 
@@ -132,6 +132,6 @@ Added in: v4.4.0
 
 Only adds the new dependency if it is found in the workspace.
 
-### --filter &lt;package_selector\>
+### --filter \<package_selector\>
 
 [Read more about filtering.](../filtering.md)

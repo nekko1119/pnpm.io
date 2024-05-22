@@ -16,7 +16,7 @@ is populated from the CLI options. In this case, you have the following options:
 
 ## Options
 
-### -C &lt;path\>, --dir &lt;path\>
+### -C \<path\>, --dir \<path\>
 
 Run as if pnpm was started in `<path>` instead of the current working directory.
 
@@ -31,7 +31,7 @@ For more information, see the documentation for individual CLI commands. Here is
 a list of handy npm equivalents to get you started:
 
 | npm command     | pnpm equivalent    |
-|-----------------|--------------------|
+| --------------- | ------------------ |
 | `npm install`   | [`pnpm install`]   |
 | `npm i <pkg>`   | [`pnpm add <pkg>`] |
 | `npm run <cmd>` | [`pnpm <cmd>`]     |
@@ -49,13 +49,13 @@ then pnpm will execute the command as a shell script, so you can do things like 
 
 Some environment variables that are not pnpm related might change the behaviour of pnpm:
 
-* [`CI`](./cli/install.md#frozen-lockfile)
+- [`CI`](./cli/install.md#frozen-lockfile)
 
 These environment variables may influence what directories pnpm will use for storing global information:
 
-* `XDG_CACHE_HOME`
-* `XDG_CONFIG_HOME`
-* `XDG_DATA_HOME`
-* `XDG_STATE_HOME`
+- `XDG_CACHE_HOME`
+- `XDG_CONFIG_HOME`
+- `XDG_DATA_HOME`
+- `XDG_STATE_HOME`
 
 You can search the docs to find the settings that leverage these environment variables.

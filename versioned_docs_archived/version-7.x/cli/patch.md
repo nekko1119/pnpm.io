@@ -23,7 +23,7 @@ pnpm patch <pkg name>@<version>
 
 ## Options
 
-### --edit-dir &lt;dir>
+### --edit-dir \<dir>
 
 Added in: v7.11.0
 

@@ -51,11 +51,10 @@ Only `devDependencies` are installed regardless of the `NODE_ENV`.
 
 Packages in `devDependencies` won't be installed.
 
-### --filter &lt;package_selector\>
+### --filter \<package_selector\>
 
 [Read more about filtering.](../filtering.md)
 
 ## Files included in the deployed project
 
 By default, all the files of the project are copied during deployment. The project's `package.json` may contain a "files" field to list the files and directories that should be copied.
-

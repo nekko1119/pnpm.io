@@ -11,13 +11,13 @@ By default, any new package is installed as a prod dependency.
 
 ## tl;dr
 
-|Command|Meaning|
-|--|--|
-|`pnpm add sax`                          |save to `dependencies`              |
-|`pnpm add -D sax`                       |save to `devDependencies`           |
-|`pnpm add -O sax`                       |save to `optionalDependencies`      |
-|`pnpm add sax@next`                     |Specify tag `next`                  |
-|`pnpm add sax@3.0.0`                    |Specify version `3.0.0`             |
+| Command              | Meaning                        |
+| -------------------- | ------------------------------ |
+| `pnpm add sax`       | save to `dependencies`         |
+| `pnpm add -D sax`    | save to `devDependencies`      |
+| `pnpm add -O sax`    | save to `optionalDependencies` |
+| `pnpm add sax@next`  | Specify tag `next`             |
+| `pnpm add sax@3.0.0` | Specify version `3.0.0`        |
 
 ## Supported package locations
 
@@ -30,9 +30,9 @@ of `package-name` from the [npm registry](https://www.npmjs.com/).
 
 You may also install packages by:
 
-* tag: `pnpm add express@nightly`
-* version: `pnpm add express@1.0.0`
-* version range: `pnpm add express@2 react@">=0.1.0 <0.2.0"`
+- tag: `pnpm add express@nightly`
+- version: `pnpm add express@1.0.0`
+- version range: `pnpm add express@2 react@">=0.1.0 <0.2.0"`
 
 ### Install from local file system
 
@@ -72,10 +72,10 @@ Installs the package from the hosted Git provider, cloning it with Git.
 
 You may install from Git by:
 
-* latest commit from master: `pnpm add kevva/is-positive`
-* commit: `pnpm add kevva/is-positive#97edff6f525f192a3f83cea1944765f769ae2678`
-* branch: `pnpm add kevva/is-positive#master`
-* version range: `pnpm add kevva/is-positive#semver:^2.0.0`
+- latest commit from master: `pnpm add kevva/is-positive`
+- commit: `pnpm add kevva/is-positive#97edff6f525f192a3f83cea1944765f769ae2678`
+- branch: `pnpm add kevva/is-positive#master`
+- version range: `pnpm add kevva/is-positive#semver:^2.0.0`
 
 ## Options
 
@@ -112,6 +112,6 @@ For instance, `pnpm add debug -W`.
 
 Install a package globally.
 
-### --filter &lt;package_selector>
+### --filter \<package_selector>
 
 [Read more about filtering.](../filtering.md)

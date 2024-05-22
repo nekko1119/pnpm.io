@@ -12,6 +12,6 @@ pnpm add lodash
 
 ## Options
 
-### -C &lt;path>, --dir &lt;path>
+### -C \<path>, --dir \<path>
 
 Run as if pnpm was started in `<path>` instead of the current working directory.

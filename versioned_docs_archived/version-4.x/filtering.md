@@ -19,7 +19,7 @@ pnpm <command> --filter <package_selector>
 
 > An article that compares Lerna's filtering to pnpm's: https://medium.com/pnpm/pnpm-vs-lerna-filtering-in-a-multi-package-repository-1f68bc644d6a
 
-## --filter &lt;package_name>
+## --filter \<package_name>
 
 Added in: v2.13.0
 
@@ -34,7 +34,7 @@ pnpm test --filter @babel/*
 pnpm test --filter *core
 ```
 
-## --filter &lt;package_name>...
+## --filter \<package_name>...
 
 Added in: v2.13.0
 
@@ -51,7 +51,7 @@ You may use a pattern to select a set of "root" packages:
 pnpm install --filter @babel/preset-*...
 ```
 
-## --filter &lt;package_name>^...
+## --filter \<package_name>^...
 
 Added in: v4.4.0
 
@@ -61,7 +61,7 @@ Selects dependencies of a package (both direct and non-direct). For instance:
 pnpm install --filter foo^...
 ```
 
-## --filter ...&lt;package_name>
+## --filter ...\<package_name>
 
 Added in: v2.14.0
 
@@ -79,7 +79,7 @@ the selectors. You can use as many filters as you want:
 pnpm install --filter ...foo --filter bar --filter qar...
 ```
 
-## --filter ...^&lt;package_name>
+## --filter ...^\<package_name>
 
 Added in: v4.4.0
 
@@ -89,11 +89,11 @@ Selects dependent of a package (both direct and non-direct). For instance:
 pnpm install --filter ...^foo
 ```
 
-## --filter ./&lt;directory>
+## --filter ./\<directory>
 
 Added in: v2.15.0
 
-## --filter {&lt;directory>}
+## --filter {\<directory>}
 
 Added in: v4.7.0
 
@@ -125,7 +125,7 @@ pnpm <cmd> --filter @babel/*{components}[origin/master]
 pnpm <cmd> --filter ...@babel/*{components}[origin/master]
 ```
 
-## --filter [&lt;since>]
+## --filter [\<since>]
 
 Added in: v4.6.0
 
